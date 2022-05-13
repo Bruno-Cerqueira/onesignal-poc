@@ -54,6 +54,21 @@
     line-height: 24px;
   }
 
+.card:active {
+  animation: press 0.2s 1 linear;
+}
+
+@keyframes press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  to {
+    transform: scale(1);
+  }
+}
   .card-container .card:not(:last-child) {
     margin-right: 0;
   }
@@ -101,5 +116,9 @@
 
   <button class="card highlight-card card-small" (click)="mute()">
     <span>Mute / Unmute</span>
+  </button>
+
+  <button class="card highlight-card card-small" (click)="subscribe()">
+    <span>Subscribe</span>
   </button>
 </div>
